@@ -1,52 +1,38 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="movement_forward" id="10" x="83" y="33">
     <next>
-      <block type="movement_setmotors" id="20" inline="true">
-        <value name="BOTHMOVLEFT">
-          <block type="math_number" id="27">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
-        <value name="BOTHMOVRIGHT">
-          <block type="math_number" id="34">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
+      <block type="movement_left" id="67">
         <next>
-          <block type="movement_left" id="67">
+          <block type="movement_right" id="78">
             <next>
-              <block type="movement_right" id="78">
+              <block type="movement_right" id="89">
                 <next>
-                  <block type="movement_right" id="89">
+                  <block type="movement_right" id="90">
                     <next>
-                      <block type="movement_right" id="90">
+                      <block type="movement_right" id="91">
                         <next>
-                          <block type="movement_right" id="91">
+                          <block type="robot_delay" id="93" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="100">
+                                <field name="NUM">1000</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="robot_delay" id="93" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="100">
-                                    <field name="NUM">1000</field>
-                                  </block>
-                                </value>
+                              <block type="movement_stutter" id="110">
                                 <next>
-                                  <block type="movement_stutter" id="110">
-                                    <next>
-                                      <block type="movement_setmotors" id="120" inline="true">
-                                        <value name="BOTHMOVLEFT">
-                                          <block type="math_number" id="127">
-                                            <field name="NUM">500</field>
-                                          </block>
-                                        </value>
-                                        <value name="BOTHMOVRIGHT">
-                                          <block type="math_number" id="134">
-                                            <field name="NUM">500</field>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="movement_stop" id="144"></block>
-                                        </next>
+                                  <block type="movement_setmotors" id="120" inline="true">
+                                    <value name="BOTHMOVLEFT">
+                                      <block type="math_number" id="127">
+                                        <field name="NUM">500</field>
                                       </block>
+                                    </value>
+                                    <value name="BOTHMOVRIGHT">
+                                      <block type="math_number" id="134">
+                                        <field name="NUM">500</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="movement_stop" id="144"></block>
                                     </next>
                                   </block>
                                 </next>
